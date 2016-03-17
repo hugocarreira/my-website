@@ -1,0 +1,25 @@
+#imgcenter {
+	width: 220px;
+	height: 220px;
+}
+
+#icon-prog {
+	height: 120px;
+}
+
+#img-parallax {
+	background-size: contain;
+	-webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#linkgh {
+	color:#e65100;
+}
+
+#love {
+	color: red;
+}
