@@ -24,6 +24,12 @@
 	color: red;
 }
 
-#hab {
+.hab,
+.nomenclatura {
 	color:#e65100;
+}
+
+blockquote {
+	border-left:5px solid #ffb74d;
+	border-right: 5px solid #ffb74d;
 }
