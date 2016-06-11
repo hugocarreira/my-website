@@ -1,4 +1,9 @@
 {
+  "name": "my-website",
+  "title": "hugocarreira.me",
+  "version": "1.0.0",
+  "homepage": "http://site.hugocarreira.me",
+  "author": "Hugo Carreira",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -8,5 +13,25 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0"
+  },
+  "description": "Meu website simples",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugocarreira/my-website.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugocarreira/my-website/issues"
   }
 }
