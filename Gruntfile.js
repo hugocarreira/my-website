@@ -39,11 +39,13 @@ module.exports = function(grunt) {
                     root: './',
                     port: 8282,
                     host: "127.0.0.1",
+                    openBrowser : true,
+                    runInBackground: true
                 }
             },
             watch: {
                 files: ['assets/js/*.js'],
-                tasks: ['assets/jshint', 'uglify']
+                tasks: ['uglify', 'http-server']
             }
     });
 
@@ -54,5 +56,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'imagemin', 'http-server', 'watch']);
+    grunt.registerTask('default', ['uglify', 'cssmin', 'imagemin', 'http-server', 'watch']);
 };
