@@ -21,16 +21,38 @@ module.exports = function(grunt) {
                     dest: 'assets/css/icons.min.css'
                 }
             },
+            imagemin: {
+                all: {
+                    options: {
+                        optimizationLevel: 7
+                    },
+                    files: [{
+                        expand: true,
+                        cwd: 'assets/img/',
+                        src: ['**/*.{png,jpg,gif}', '*.jpg'],
+                        dest: 'assets/img/compressed/'
+                  }]
+                },
+            },
+            'http-server': {
+                'dev': {
+                    root: './',
+                    port: 8282,
+                    host: "127.0.0.1",
+                }
+            },
             watch: {
                 files: ['assets/js/*.js'],
                 tasks: ['assets/jshint', 'uglify']
             }
-        });
+    });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-http-server');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'imagemin', 'http-server', 'watch']);
 };
